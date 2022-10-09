@@ -1,0 +1,46 @@
+:root {
+    --main-color: #343a40;
+}
+.container {
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+}
+.container::before, 
+.container::after {
+    content: '';
+    width: 50%;
+    height: 100%;  
+    position: absolute;  
+}
+.container::before {
+    background-color: #eee;
+    border: 20px solid var(--main-color);
+    border-right: none;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.container::after {
+    background-color: var(--main-color);
+    border: 20px solid #eee;
+    right: 0;
+    top: 0;
+    border-left: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.container img {
+    max-width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin-top: 50px;
+}
